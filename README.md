@@ -6,4 +6,4 @@ https://thesalts.github.io
 
 
 
-made by 소금(Tuz)
+made by 소금(Tuz#6414)
