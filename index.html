@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Block display generator</title>
+    <script type="module" crossorigin src="index-c8139638.js"></script>
+    <link rel="stylesheet" href="index-8f7c4e0b.css" />
+  </head>
+  <body>
+    <div id="container"></div>
+    <div id="panel">
+      <h1>Block display generator</h1>
+      <h4>
+        <span style="color: red">Red Line: X axis</span> |
+        <span style="color: lime">Green Line: Y axis</span> |
+        <span style="color: blue">Blue Line: Z axis</span>
+      </h4>
+
+      <div id="controls">
+        <div class="input-wrapper">
+          <label class="input-label">X Rotation:</label>
+          <input
+            class="input-range"
+            type="range"
+            id="x-rotation"
+            min="-180"
+            max="180"
+            value="0"
+          /><input
+            class="input-field"
+            type="float"
+            id="x-rot"
+            name="x"
+            step="any"
+            value="0"
+            min="-180"
+            max="180"
+          />
+        </div>
+        <div class="input-wrapper">
+          <label class="input-label">Y Rotation:</label>
+          <input
+            class="input-range"
+            type="range"
+            id="y-rotation"
+            min="-180"
+            max="180"
+            value="0"
+          /><input
+            class="input-field"
+            type="float"
+            id="y-rot"
+            name="y"
+            step="any"
+            value="0"
+            min="-180"
+            max="180"
+          />
+        </div>
+        <div class="input-wrapper">
+          <label class="input-label">Z Rotation:</label>
+          <input
+            class="input-range"
+            type="range"
+            id="z-rotation"
+            min="-180"
+            max="180"
+            value="0"
+          /><input
+            class="input-field"
+            type="float"
+            id="z-rot"
+            name="z"
+            step="any"
+            value="0"
+            min="-180"
+            max="180"
+          />
+        </div>
+      </div>
+      <div style="position: relative; display: flex">
+        <div>
+          <label><b>Quaternions</b></label>
+          <div style="height: 6px"></div>
+          <div class="input-wrapper">
+            <label class="input-label" for="x-input">X:</label>
+            <input
+              class="input-field"
+              type="float"
+              id="x-input"
+              name="x"
+              step="any"
+              value="0"
+            />
+          </div>
+          <div class="input-wrapper">
+            <label class="input-label" for="y-input">Y:</label>
+            <input
+              class="input-field"
+              type="float"
+              id="y-input"
+              name="y"
+              step="any"
+              value="0"
+            />
+          </div>
+          <div class="input-wrapper">
+            <label class="input-label" for="z-input">Z:</label>
+            <input
+              class="input-field"
+              type="float"
+              id="z-input"
+              name="z"
+              step="any"
+              value="0"
+            />
+          </div>
+          <div class="input-wrapper">
+            <label class="input-label" for="w-input">W:</label>
+            <input
+              class="input-field"
+              type="float"
+              id="w-input"
+              name="w"
+              step="any"
+              value="1"
+            />
+          </div>
+          <br />
+          <label><b>Euler Angles</b></label>
+          <div style="height: 6px"></div>
+          <div class="input-wrapper">
+            <label class="input-label">X:</label>
+            <input
+              class="input-field"
+              type="float"
+              id="eulerX"
+              value="0"
+              step="any"
+            />
+          </div>
+          <div class="input-wrapper">
+            <label class="input-label">Y:</label>
+            <input
+              class="input-field"
+              type="float"
+              id="eulerY"
+              value="0"
+              step="any"
+            />
+          </div>
+          <div class="input-wrapper">
+            <label class="input-label">Z:</label>
+            <input
+              class="input-field"
+              type="float"
+              id="eulerZ"
+              value="0"
+              step="any"
+            />
+          </div>
+          <form id="reset">
+            <button type="submit" class="button">Reset</button>
+          </form>
+        </div>
+        <div style="width: 70px"></div>
+        <div>
+          <br />
+          <div class="input-wrapper">
+            <label class="input-label">start_interpolation</label>
+            <input
+              class="input-field"
+              type="float"
+              id="start_interpolation"
+              value="0"
+              step="1"
+            />
+          </div>
+          <div class="input-wrapper">
+            <label class="input-label">interpolation_duration</label>
+            <input
+              class="input-field"
+              type="float"
+              id="interpolation_duration"
+              value="0"
+              step="1"
+              min="0"
+            />
+          </div>
+
+          <div class="input-wrapper">
+            <label class="input-label">translationX</label>
+            <input
+              class="input-field"
+              type="float"
+              id="translationX"
+              value="0"
+              step="1"
+            />
+          </div>
+          <div class="input-wrapper">
+            <label class="input-label">translationY</label>
+            <input
+              class="input-field"
+              type="float"
+              id="translationY"
+              value="0"
+              step="1"
+            />
+          </div>
+          <div class="input-wrapper">
+            <label class="input-label">translationZ</label>
+            <input
+              class="input-field"
+              type="float"
+              id="translationZ"
+              value="0"
+              step="1"
+            />
+          </div>
+          <div class="input-wrapper">
+            <label class="input-label">scaleX</label>
+            <input
+              class="input-field"
+              type="float"
+              id="scaleX"
+              value="1"
+              step="1"
+            />
+          </div>
+          <div class="input-wrapper">
+            <label class="input-label">scaleY</label>
+            <input
+              class="input-field"
+              type="float"
+              id="scaleY"
+              value="1"
+              step="1"
+            />
+          </div>
+          <div class="input-wrapper">
+            <label class="input-label">scaleZ</label>
+            <input
+              class="input-field"
+              type="float"
+              id="scaleZ"
+              value="1"
+              step="1"
+            />
+          </div>
+          <label for="imAnimate">
+            Immediate Apply
+            <input type="checkbox" id="imAnimate" name="imAnimate" />
+          </label>
+          <label for="startDefault">
+            Starts at default
+            <input
+              type="checkbox"
+              id="startDefault"
+              name="startDefault"
+              checked="false"
+            />
+          </label>
+          <form id="animateBtn">
+            <button type="submit" id="animateBtn" class="button">
+              Animate
+            </button>
+          </form>
+        </div>
+      </div>
+      <div>
+        <div class="menu-wrapper"></div>
+        <label for="menu">billboard</label>
+        <select id="menu">
+          <option value="fixed">fixed</option>
+          <option value="vertical">vertical</option>
+          <option value="horizontal">horizontal</option>
+          <option value="center">center</option>
+        </select>
+        <label class="input-label">
+          &lt;<span style="color: #ff5555">String</span>&gt;
+          <span style="color: #ffaa00">String</span>
+          <span style="color: #aaaaaa"
+            >fixed, vertical, horizontal, center</span
+          ></label
+        >
+      </div>
+      <br />
+      <div class="input-wrapper">
+        <label class="input-label" for="block_state">block_state</label>
+        <input
+          class="input-field"
+          type="text"
+          id="block_state"
+          name="block_state"
+          value="minecraft:stone"
+        />
+        <div style="width: 12px"></div>
+        <label class="input-label">
+          &lt;<span style="color: #ff5555">String</span>&gt;
+          <span style="color: #ffaa00">String</span>
+          <span style="color: #aaaaaa">minecraft:block</span></label
+        >
+      </div>
+      <div class="input-wrapper">
+        <label class="input-label">brightness.block</label>
+        <input
+          class="input-field"
+          type="number"
+          id="brightness_block"
+          step="1"
+          min="0"
+          max="15"
+        />
+        <div style="width: 12px"></div>
+        <label class="input-label">
+          &lt;<span style="color: #ff5555">Int</span>&gt;
+          <span style="color: #ffaa00">number</span>
+          <span style="color: #aaaaaa">0~15</span></label
+        >
+      </div>
+      <div class="input-wrapper">
+        <label class="input-label">brightness.sky</label>
+        <input
+          class="input-field"
+          type="number"
+          id="brightness_sky"
+          step="1"
+          min="0"
+          max="15"
+        />
+        <div style="width: 12px"></div>
+        <label class="input-label">
+          &lt;<span style="color: #ff5555">Int</span>&gt;
+          <span style="color: #ffaa00">number</span>
+          <span style="color: #aaaaaa">0~15</span></label
+        >
+      </div>
+      <div class="input-wrapper">
+        <label class="input-label">shadow_radius</label>
+        <input
+          class="input-field"
+          type="float"
+          id="shadow_radius"
+          min="0"
+          max="64"
+        />
+        <div style="width: 12px"></div>
+        <label class="input-label">
+          &lt;<span style="color: #ff5555">float</span>&gt;
+          <span style="color: #ffaa00">number</span>
+          <span style="color: #aaaaaa">0~64</span></label
+        >
+      </div>
+      <div class="input-wrapper">
+        <label class="input-label">shadow_strength</label>
+        <input class="input-field" type="float" id="shadow_strength" min="0" />
+        <div style="width: 12px"></div>
+        <label class="input-label">
+          &lt;<span style="color: #ff5555">float</span>&gt;
+          <span style="color: #ffaa00">number</span>
+          <span style="color: #aaaaaa">0~</span></label
+        >
+      </div>
+      <div class="input-wrapper">
+        <label class="input-label">view_range </label>
+        <input class="input-field" type="float" id="view_range" min="0" />
+        <div style="width: 12px"></div>
+        <label class="input-label">
+          &lt;<span style="color: #ff5555">float</span>&gt;
+          <span style="color: #ffaa00">number</span>
+          <span style="color: #aaaaaa">0~</span></label
+        >
+      </div>
+      <div class="input-wrapper">
+        <label class="input-label">Rotation</label>
+        <input class="input-field" type="text" id="Rotation" />
+        <div style="width: 12px"></div>
+        <label class="input-label">
+          &lt;<span style="color: #ff5555">List: float</span>&gt;
+          <span style="color: #ffaa00">float Array</span>
+          <span style="color: #aaaaaa"
+            >[&lt;float&gt;f, &lt;float&gt;f]</span
+          ></label
+        >
+      </div>
+      <div class="input-wrapper">
+        <label class="input-label">Tags</label>
+        <input class="input-field" type="text" id="Tags" />
+        <div style="width: 12px"></div>
+        <label class="input-label">
+          &lt;<span style="color: #ff5555">List: String</span>&gt;
+          <span style="color: #ffaa00">String Array</span
+          ><span style="color: #aaaaaa"> ["&lt;String&gt;", ...]</span>
+        </label>
+      </div>
+      <div class="input-wrapper">
+        <label class="input-label">glow_color_override</label>
+        <input class="input-field" type="color" id="glow_color_override" />
+        <div style="width: 12px"></div>
+        <label class="input-label">
+          &lt;<span style="color: #ff5555">Int</span>&gt;
+          <span style="color: #ffaa00">number</span>
+          <span style="color: #aaaaaa">~</span></label
+        >
+      </div>
+      <div class="input-wrapper">
+        <label for="Glowing">
+          Glowing
+          <input type="checkbox" id="Glowing" name="Glowing" />
+        </label>
+        <label class="input-label">
+          &lt;<span style="color: #ff5555">Boolean</span>&gt;
+          <span style="color: #ffaa00">boolean</span>
+        </label>
+      </div>
+
+      <!-- output -->
+      <div>
+        <h2>Output:</h2>
+        <div class="code-block">
+          <div class="code-header">
+            <span class="code-language" id="code-language">command</span>
+            <button class="code-copy" id="copy">Copy</button>
+          </div>
+          <pre class="code-content">
+          <code id="output" class="out">
+          </code>
+        </pre>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r119/three.min.js"></script>
+  </body>
+</html>
