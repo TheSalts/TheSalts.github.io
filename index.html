@@ -3,7 +3,7 @@
   <head>
     <title>Block display generator</title>
     <script type="module" crossorigin src="/index.js"></script>
-    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/index.css" />
   </head>
   <body>
     <div id="container"></div>
@@ -14,7 +14,6 @@
         <span style="color: lime">Green Line: Y axis</span> |
         <span style="color: blue">Blue Line: Z axis</span>
       </h4>
-
       <div id="controls">
         <div class="input-wrapper">
           <label class="input-label">X Rotation:</label>
@@ -315,7 +314,7 @@
         <label class="input-label">
           &lt;<span style="color: #ff5555">Int</span>&gt;
           <span style="color: #ffaa00">number</span>
-          <span style="color: #aaaaaa">0~15</span></label
+          <span style="color: #aaaaaa">0..15</span></label
         >
       </div>
       <div class="input-wrapper">
@@ -332,7 +331,7 @@
         <label class="input-label">
           &lt;<span style="color: #ff5555">Int</span>&gt;
           <span style="color: #ffaa00">number</span>
-          <span style="color: #aaaaaa">0~15</span></label
+          <span style="color: #aaaaaa">0..15</span></label
         >
       </div>
       <div class="input-wrapper">
@@ -348,7 +347,7 @@
         <label class="input-label">
           &lt;<span style="color: #ff5555">float</span>&gt;
           <span style="color: #ffaa00">number</span>
-          <span style="color: #aaaaaa">0~64</span></label
+          <span style="color: #aaaaaa">0..64</span></label
         >
       </div>
       <div class="input-wrapper">
@@ -358,7 +357,7 @@
         <label class="input-label">
           &lt;<span style="color: #ff5555">float</span>&gt;
           <span style="color: #ffaa00">number</span>
-          <span style="color: #aaaaaa">0~</span></label
+          <span style="color: #aaaaaa">0..</span></label
         >
       </div>
       <div class="input-wrapper">
@@ -368,7 +367,7 @@
         <label class="input-label">
           &lt;<span style="color: #ff5555">float</span>&gt;
           <span style="color: #ffaa00">number</span>
-          <span style="color: #aaaaaa">0~</span></label
+          <span style="color: #aaaaaa">0..</span></label
         >
       </div>
       <div class="input-wrapper">
@@ -394,13 +393,33 @@
         </label>
       </div>
       <div class="input-wrapper">
+        <label class="input-label">width</label>
+        <input class="input-field" type="text" id="width" />
+        <div style="width: 12px"></div>
+        <label class="input-label">
+          &lt;<span style="color: #ff5555">float</span>&gt;
+          <span style="color: #ffaa00">number</span
+          ><span style="color: #aaaaaa"> 0..</span>
+        </label>
+      </div>
+      <div class="input-wrapper">
+        <label class="input-label">height</label>
+        <input class="input-field" type="text" id="height" />
+        <div style="width: 12px"></div>
+        <label class="input-label">
+          &lt;<span style="color: #ff5555">float</span>&gt;
+          <span style="color: #ffaa00">number</span
+          ><span style="color: #aaaaaa"> 0..</span>
+        </label>
+      </div>
+      <div class="input-wrapper">
         <label class="input-label">glow_color_override</label>
         <input class="input-field" type="color" id="glow_color_override" />
         <div style="width: 12px"></div>
         <label class="input-label">
           &lt;<span style="color: #ff5555">Int</span>&gt;
           <span style="color: #ffaa00">number</span>
-          <span style="color: #aaaaaa">~</span></label
+          <span style="color: #aaaaaa">default:-1 (team color)</span></label
         >
       </div>
       <div class="input-wrapper">
@@ -414,7 +433,7 @@
         </label>
       </div>
       <div class="input-wrapper">
-        <h2>Output:</h2>
+        <h2>Output</h2>
       </div>
       <br />
       <div class="input-wrapper">
@@ -466,7 +485,5 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r119/three.min.js"></script>
-    
-    
   </body>
 </html>
