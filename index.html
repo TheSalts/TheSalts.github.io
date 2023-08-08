@@ -3,7 +3,7 @@
   <head>
     <title>Block display generator</title>
     <script type="module" crossorigin src="/index.js"></script>
-    <link rel="stylesheet" href="/index.css" />
+    <link rel="stylesheet" href="/index.css">
   </head>
   <body>
     <div id="container"></div>
@@ -14,6 +14,7 @@
         <span style="color: lime">Green Line: Y axis</span> |
         <span style="color: blue">Blue Line: Z axis</span>
       </h4>
+
       <div id="controls">
         <div class="input-wrapper">
           <label class="input-label">X Rotation:</label>
@@ -268,7 +269,7 @@
       </div>
       <div>
         <div class="menu-wrapper"></div>
-        <label for="menu">billboard</label>
+        <label for="menu" style="margin-right: 4px">billboard</label>
         <select id="menu">
           <option value="fixed">fixed</option>
           <option value="vertical">vertical</option>
@@ -286,6 +287,7 @@
       <br />
       <div class="input-wrapper">
         <label class="input-label" for="block_state">block_state</label>
+        <div style="width: 12px"></div>
         <input
           class="input-field"
           type="text"
@@ -302,6 +304,7 @@
       </div>
       <div class="input-wrapper">
         <label class="input-label">brightness.block</label>
+        <div style="width: 12px"></div>
         <input
           class="input-field"
           type="number"
@@ -319,6 +322,7 @@
       </div>
       <div class="input-wrapper">
         <label class="input-label">brightness.sky</label>
+        <div style="width: 12px"></div>
         <input
           class="input-field"
           type="number"
@@ -336,6 +340,7 @@
       </div>
       <div class="input-wrapper">
         <label class="input-label">shadow_radius</label>
+        <div style="width: 12px"></div>
         <input
           class="input-field"
           type="float"
@@ -352,6 +357,7 @@
       </div>
       <div class="input-wrapper">
         <label class="input-label">shadow_strength</label>
+        <div style="width: 12px"></div>
         <input class="input-field" type="float" id="shadow_strength" min="0" />
         <div style="width: 12px"></div>
         <label class="input-label">
@@ -362,6 +368,7 @@
       </div>
       <div class="input-wrapper">
         <label class="input-label">view_range </label>
+        <div style="width: 12px"></div>
         <input class="input-field" type="float" id="view_range" min="0" />
         <div style="width: 12px"></div>
         <label class="input-label">
@@ -372,6 +379,7 @@
       </div>
       <div class="input-wrapper">
         <label class="input-label">Rotation</label>
+        <div style="width: 12px"></div>
         <input class="input-field" type="text" id="Rotation" />
         <div style="width: 12px"></div>
         <label class="input-label">
@@ -384,6 +392,7 @@
       </div>
       <div class="input-wrapper">
         <label class="input-label">Tags</label>
+        <div style="width: 12px"></div>
         <input class="input-field" type="text" id="Tags" />
         <div style="width: 12px"></div>
         <label class="input-label">
@@ -394,6 +403,7 @@
       </div>
       <div class="input-wrapper">
         <label class="input-label">width</label>
+        <div style="width: 12px"></div>
         <input class="input-field" type="text" id="width" />
         <div style="width: 12px"></div>
         <label class="input-label">
@@ -404,6 +414,7 @@
       </div>
       <div class="input-wrapper">
         <label class="input-label">height</label>
+        <div style="width: 12px"></div>
         <input class="input-field" type="text" id="height" />
         <div style="width: 12px"></div>
         <label class="input-label">
@@ -414,6 +425,7 @@
       </div>
       <div class="input-wrapper">
         <label class="input-label">glow_color_override</label>
+        <div style="width: 12px"></div>
         <input class="input-field" type="color" id="glow_color_override" />
         <div style="width: 12px"></div>
         <label class="input-label">
@@ -433,8 +445,11 @@
         </label>
       </div>
       <div class="input-wrapper">
-        <h2>Output</h2>
+        <label class="input-label">
+          <h2 style="margin-right: 5px; padding-right: 5px">Output</h2>
+        </label>
       </div>
+
       <br />
       <div class="input-wrapper">
         <label class="input-label" for="data_merge">
@@ -461,7 +476,7 @@
         </label>
       </div>
       <div>
-        <label for="menu">rotation</label>
+        <label for="menu" style="margin-right: 4px">rotation</label>
         <select id="rotationmenu">
           <option value="left_rotation">left_rotation</option>
           <option value="right_rotation">right_rotation</option>
@@ -485,5 +500,7 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r119/three.min.js"></script>
+    
+    
   </body>
 </html>
