@@ -7,4 +7,4 @@ https://thesalts.github.io
 - [ ] transform matrix4, AxisAngle form support
 
 
-made by 소금(Tuz#6414)
+made by 소금(Tuz#7423)
