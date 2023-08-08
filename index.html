@@ -404,7 +404,7 @@
         >
       </div>
       <div class="input-wrapper">
-        <label for="Glowing">
+        <label class="input-label" for="Glowing">
           Glowing
           <input type="checkbox" id="Glowing" name="Glowing" />
         </label>
@@ -413,10 +413,39 @@
           <span style="color: #ffaa00">boolean</span>
         </label>
       </div>
-
+      <div class="input-wrapper">
+        <h2>Output:</h2>
+      </div>
+      <br />
+      <div class="input-wrapper">
+        <label class="input-label" for="data_merge">
+          data merge
+          <input type="checkbox" id="data_merge" name="data_merge" />
+        </label>
+      </div>
+      <div class="input-wrapper">
+        <label class="input-label" for="AxisAngle">
+          AxisAngle
+          <input type="checkbox" id="AxisAngle" name="AxisAngle" />
+        </label>
+      </div>
+      <div class="input-wrapper">
+        <label class="input-label" for="Matrix4">
+          Matrix4
+          <input type="checkbox" id="Matrix4" name="Matrix4" />
+        </label>
+      </div>
+      <div>
+        <label for="menu">rotation</label>
+        <select id="rotationmenu">
+          <option value="left_rotation">left_rotation</option>
+          <option value="right_rotation">right_rotation</option>
+        </select>
+      </div>
+      <br />
+      <br />
       <!-- output -->
       <div>
-        <h2>Output:</h2>
         <div class="code-block">
           <div class="code-header">
             <span class="code-language" id="code-language">command</span>
