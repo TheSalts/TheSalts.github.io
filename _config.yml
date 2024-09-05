@@ -6,8 +6,8 @@ url: "https://thesalts.github.io/"
 theme_settings:
   # Meta
   title: TheSalt's blog
-  avatar: assets/img/avatar.png
-  favicon: assets/favicon.ico
+  avatar:
+  favicon:
   gravatar: # Email MD5 hash
   description: "" # used by search engines
 
