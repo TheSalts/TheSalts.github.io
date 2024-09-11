@@ -13,6 +13,8 @@ theme_settings:
 
   # Header and footer text
   header_text:
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7413224439907034"
+    crossorigin="anonymous"></script>
   header_text_feature_image:
   footer_text: >
     Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/rohanchandra/type-theme">Type Theme</a>
